@@ -1,5 +1,5 @@
-const ipc = require('electron').ipcMain
+const ipc = require('electron').ipcMain;
 
-ipc.on('asynchronous-message', function (event, arg) {
-  event.sender.send('asynchronous-reply', 'pong')
-})
+ipc.on('asynchronous-message', (event) => {
+    event.sender.send('asynchronous-reply', 'pong');
+});
